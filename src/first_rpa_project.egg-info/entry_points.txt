@@ -1,0 +1,2 @@
+[console_scripts]
+first_rpa = bots.first_rpa.__main__:main

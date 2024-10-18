@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "first_rpa_project"
+version = "1.0.0"
+description = "RPA Project with Selenium"
+requires-python = ">=3.7"  # Versión mínima de Python
+authors = [
+    { name="Gerson Andrade", email="g.gerson51@gmail.com" }
+]
+dependencies = [
+    "selenium>=4.0.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["first_rpa", "rpa_common"]
+
+[project.scripts]
+first_rpa = "bots.first_rpa.__main__:main"
+
+#[tool.setuptools.packages.find]
+#where = ["src"]  # Indica la carpeta donde se encuentran los paquetes
+#include = ["*"]  # Incluye todos los paquetes encontrados
+
+#[tool.setuptools.packages.find]
+#where = ["rpa_common", "first_rpa"]
+#
+#[project.scripts]
+#first_rpa = "first_rpa.main:main"
