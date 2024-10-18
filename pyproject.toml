@@ -11,7 +11,8 @@ authors = [
     { name="Gerson Andrade", email="g.gerson51@gmail.com" }
 ]
 dependencies = [
-    "selenium>=4.0.0"
+    "selenium>=4.0.0",
+    "requests>=2.0.0"
 ]
 
 [tool.setuptools.packages.find]
@@ -20,13 +21,3 @@ include = ["first_rpa", "rpa_common"]
 
 [project.scripts]
 first_rpa = "bots.first_rpa.__main__:main"
-
-#[tool.setuptools.packages.find]
-#where = ["src"]  # Indica la carpeta donde se encuentran los paquetes
-#include = ["*"]  # Incluye todos los paquetes encontrados
-
-#[tool.setuptools.packages.find]
-#where = ["rpa_common", "first_rpa"]
-#
-#[project.scripts]
-#first_rpa = "first_rpa.main:main"
